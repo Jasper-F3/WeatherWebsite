@@ -1,0 +1,80 @@
+/*
+Flex para alinhar os cards no centro da pagina
+e um do lado do outro com um gap de 70 pixels
+*/
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  width: 100vw;
+  height: 100vh;
+}
+
+/*
+Alinhamento do titulo do card
+*/
+.card-title {
+  text-align: center;
+}
+
+/*
+Alinhamento e configuração da imagem no topo do card
+*/
+.card-img-top {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/*
+Imagem ao lado do titulo (mesma citada acima)
+*/
+.card-image-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/*
+Classe criado para alinhar o conteudo (divisor colorido, dado, simobolo)
+*/
+.card-list-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+/*
+Simbolo da velocidade do vento bagulho (divisor verde na esquerda)
+*/
+.wind-icon {
+  width: 10px;
+  height: 20px;
+  background-color: #1dee0a;
+  border-radius: 10px;
+}
+/*
+Simbolo de humidade (divisor azul na esquerda)
+*/
+.humitity-icon {
+  width: 10px;
+  height: 20px;
+  background-color: #0aadee;
+  border-radius: 10px;
+}
+/*
+Alinhamento das listas do card
+*/
+.list-group-item {
+  right: 40px;
+}
+
+/*
+Alinhamento dos intens dentro do menu "Sobre"
+*/
+.dropdown-item {
+  text-align: left;
+}

@@ -37,6 +37,17 @@ Imagem ao lado do titulo (mesma citada acima)
   gap: 30px;
 }
 
+.icon {
+  left: 50px;
+  top: -20px;
+  position: absolute;
+}
+
+.navbar-brand {
+  height: 55px;
+  position: relative;
+}
+
 /*
 Classe criado para alinhar o conteudo (divisor colorido, dado, simobolo)
 */

@@ -17,6 +17,37 @@ e um do lado do outro com um gap de 70 pixels
 }
 
 /*
+Criação da Responsividade dos slides do fundo
+*/
+.bg-img-1 {
+  background-image: url(/img/pexels-brett-sayles-1322185.jpg);
+}
+
+.bg-img-2 {
+  background-image: url(/img/pexels-louis-2101187.jpg);
+}
+
+.bg-img-3 {
+  background-image: url(/img/pexels-matthew-montrone-1324803.jpg);
+}
+
+.carousel-image {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/*
+Inicio da tentaive de deixar os cards responivos
+*/
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 600px) {
+}
+
+/*
 Alinhamento do titulo do card
 */
 .card {
@@ -116,12 +147,12 @@ Alinhamento dos intens dentro do menu "Sobre"
   background-color: #fff;
   position: absolute;
   width: 67vw;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 70px;
-  margin-top: 5em;
+  margin-top: 20em;
   border-radius: 0.5em;
 }
 

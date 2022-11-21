@@ -104,7 +104,7 @@
       data-bs-ride="carousel"
     >
       <div class="carousel-inner">
-        <div class="carousel-item carousel-image bg-img-1 active">
+        <div class="carousel-item carousel-image bg-img-1 active c-img">
           <div></div>
           <!-- <img
             src="/img/pexels-louis-2101187.jpg"
@@ -112,17 +112,17 @@
             alt="..."
           /> -->
         </div>
-        <div class="carousel-item carousel-image bg-img-2">
+        <div class="carousel-item carousel-image bg-img-2 c-img">
           <!-- <img
             src="/img/pexels-brett-sayles-1322185.jpg" 
             class="d-block w-100 c-img"
             alt="..."
           /> -->
         </div>
-        <div class="carousel-item carousel-image bg-img-3">
+        <div class="carousel-item carousel-image bg-img-3 c-img">
           <!-- <img
            src="/img/pexels-matthew-montrone-1324803.jpg"
-            class="d-block w-100 c-img"
+            class="d-block w-100 "
             alt="..." 
           /> -->
         </div>
@@ -130,9 +130,9 @@
         <!--Classe Flex engloba os 3 cards para poder alinha-los-->
         <div class="flex">
           <!--Primeiro Card "Ontem?"-->
-          <div class="fundo">
+          <div class="fundo row">
             <!-- trocado style inline para arquivo css -->
-            <div class="card">
+            <!-- <div class="card col-12 col-md-4">
               <div class="card-body">
                 <h5 class="card-title">Quinta-Feira</h5>
                 <div class="card-image-title">
@@ -160,9 +160,9 @@
                   </div>
                 </li>
               </ul>
-            </div>
+            </div> -->
             <!--Segundo Card "Hoje?"-->
-            <div class="card">
+            <div class="card col-12 col-md-4">
               <div class="card-body">
                 <h5 class="card-title">Sexta</h5>
                 <div class="card-image-title">
@@ -192,7 +192,7 @@
               </ul>
             </div>
             <!--Terceiro Card "Amanhã? "-->
-            <div class="card">
+            <!-- <div class="card col-12 col-md-4">
               <div class="card-body">
                 <h5 class="card-title">Sábado</h5>
                 <div class="card-image-title">
@@ -220,12 +220,136 @@
                   </div>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
         <!--Fim dos cards-->
       </div>
     </div>
+    <div class="flex">
+      <!--Primeiro Card "Ontem?"-->
+      <div class="fundo2 row">
+        <!-- trocado style inline para arquivo css -->
+        <div class="card col-12 col-md-4">
+          <div class="card-body">
+            <h5 class="card-title">Quinta-Feira</h5>
+            <div class="card-image-title">
+              <img
+                src="/Icons/cloud-drizzle.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <h5 class="temperature">18°</h5>
+            </div>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="card-list-content">
+                <div class="wind-icon"></div>
+                Vento:
+                <div>26km/h <img src="/Icons/wind.svg" alt="" /></div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="card-list-content">
+                <div class="humitity-icon"></div>
+                Umidade:
+                <div>50% <img src="/Icons/droplet.svg" alt="" /></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--Terceiro Card "Amanhã? "-->
+        <div class="card col-12 col-md-4">
+          <div class="card-body">
+            <h5 class="card-title">Sábado</h5>
+            <div class="card-image-title">
+              <img
+                src="/Icons/cloud-drizzle.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <h5 class="temperature">18°</h5>
+            </div>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="card-list-content">
+                <div class="wind-icon"></div>
+                Vento:
+                <div>26km/h <img src="/Icons/wind.svg" alt="" /></div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="card-list-content">
+                <div class="humitity-icon"></div>
+                Umidade:
+                <div>50% <img src="/Icons/droplet.svg" alt="" /></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="card col-12 col-md-4">
+          <div class="card-body">
+            <h5 class="card-title">Sábado</h5>
+            <div class="card-image-title">
+              <img
+                src="/Icons/cloud-drizzle.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <h5 class="temperature">18°</h5>
+            </div>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="card-list-content">
+                <div class="wind-icon"></div>
+                Vento:
+                <div>26km/h <img src="/Icons/wind.svg" alt="" /></div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="card-list-content">
+                <div class="humitity-icon"></div>
+                Umidade:
+                <div>50% <img src="/Icons/droplet.svg" alt="" /></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="card col-12 col-md-4">
+          <div class="card-body">
+            <h5 class="card-title">Sábado</h5>
+            <div class="card-image-title">
+              <img
+                src="/Icons/cloud-drizzle.svg"
+                class="card-img-top"
+                alt="..."
+              />
+              <h5 class="temperature">18°</h5>
+            </div>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="card-list-content">
+                <div class="wind-icon"></div>
+                Vento:
+                <div>26km/h <img src="/Icons/wind.svg" alt="" /></div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="card-list-content">
+                <div class="humitity-icon"></div>
+                Umidade:
+                <div>50% <img src="/Icons/droplet.svg" alt="" /></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--Fim dos cards-->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

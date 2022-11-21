@@ -19,68 +19,12 @@ Nova NavBar não funcionando não sei porque
   color: white;
 }
 
-.navbar-links li img {
-  width: 30px;
-  margin-top: -5px;
-}
-
-.navbar-links li a {
-  padding: 0.3rem;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  background-color: #1dee0a;
-  border-radius: 10px;
-}
-
 .navbar-brand {
   font-size: 1.5rem;
 }
 
-.navbar-links ul {
-  margin: 10;
-  padding: 10;
-  display: flex;
-  gap: 60px;
-  font-size: 22px;
-  z-index: 9999;
-}
-
 .navbar-links li:hover {
   background-color: #555;
-}
-
-@media (max-width: 600px) {
-  .toggle-button {
-    display: flex;
-  }
-
-  .navbar-links {
-    display: none;
-    width: 100%;
-  }
-  .navba {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .navbar-links li {
-    text-align: center;
-  }
-
-  .navbar-links a {
-    padding: 0.5rem 1rem;
-  }
-
-  .navbar-links.active {
-    display: flex;
-  }
 }
 
 .slide {

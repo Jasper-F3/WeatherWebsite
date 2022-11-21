@@ -122,7 +122,7 @@ Alinhamento dos intens dentro do menu "Sobre"
   align-items: center;
   gap: 70px;
   margin-top: 5em;
-  border-radius: 1.5em;
+  border-radius: 0.5em;
 }
 
 .carousel-inner .c-img {

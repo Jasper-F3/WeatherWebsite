@@ -2,6 +2,10 @@ body {
   width: 100vw;
   height: 100vh;
 }
+.slide {
+  width: 100vw;
+  height: 100vh;
+}
 
 /*
 Flex para alinhar os cards no centro da pagina
@@ -11,7 +15,7 @@ e um do lado do outro com um gap de 70 pixels
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 70px;
+  margin: 0;
   width: 100vw;
   height: 100vh;
 }
@@ -32,6 +36,7 @@ Criação da Responsividade dos slides do fundo
 }
 
 .carousel-image {
+  width: 100vh;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -41,17 +46,16 @@ Criação da Responsividade dos slides do fundo
 /*
 Inicio da tentaive de deixar os cards responivos
 */
-@media screen and (max-width: 767px) {
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 767px) {
 }
 
 /*
 Alinhamento do titulo do card
 */
+/* inicio card */
 .card {
-  width: 12em;
+  margin-top: 1.5em;
+  width: 16em;
   height: 200px;
   background-color: #fafafa;
 }
@@ -59,7 +63,7 @@ Alinhamento do titulo do card
   text-align: center;
 }
 .list-group-item {
-  width: 11.8em;
+  width: 14.8em;
   background-color: #fafafa;
 }
 /*
@@ -134,6 +138,7 @@ Alinhamento dos intens dentro do menu "Sobre"
 .dropdown-item {
   text-align: left;
 }
+
 /* Mudança no botao de pesquisa - navbar */
 .pesquisa {
   width: 280px;
@@ -146,17 +151,72 @@ Alinhamento dos intens dentro do menu "Sobre"
 .fundo {
   background-color: #fff;
   position: absolute;
-  width: 67vw;
-  height: 100vh;
+  width: 70vw;
+  height: 97vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 70px;
-  margin-top: 20em;
+  gap: 10px;
+  margin-top: 4em;
   border-radius: 0.5em;
+  border: 1px solid green;
 }
-
-.carousel-inner .c-img {
+.fundo {
+  background-color: #fff;
+  position: absolute;
+  width: 70vw;
+  height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4em;
+  border-radius: 0.5em;
+  border: 1px solid green;
+}
+.c-img {
   width: 100vw;
   height: 100vh;
+}
+.fundo2 {
+  background-color: transparent;
+  position: absolute;
+  width: 70vw;
+  height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0.5em;
+  /* border: 1px solid #7a7a7a; */
+}
+
+@media (min-width: 768px) {
+  .card {
+    margin-top: 1.5em;
+    width: 14em;
+    height: 210px;
+    background-color: #fafafa;
+  }
+  .list-group-item {
+    width: 12.8em;
+    background-color: #fafafa;
+  }
+  .fundo {
+    margin: 0;
+    width: 40vw;
+    height: 50vh;
+  }
+  .fundo2 {
+    width: 70vw;
+    height: 80vh;
+  }
+}
+@media (max-width: 600px) {
+  .fundo {
+    margin-top: 10em;
+  }
+  .fundo2 {
+    margin-top: 10em;
+  }
 }

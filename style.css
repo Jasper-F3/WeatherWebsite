@@ -1,3 +1,8 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 /*
 Flex para alinhar os cards no centro da pagina
 e um do lado do outro com um gap de 70 pixels
@@ -14,10 +19,18 @@ e um do lado do outro com um gap de 70 pixels
 /*
 Alinhamento do titulo do card
 */
+.card {
+  width: 12em;
+  height: 200px;
+  background-color: #fafafa;
+}
 .card-title {
   text-align: center;
 }
-
+.list-group-item {
+  width: 11.8em;
+  background-color: #fafafa;
+}
 /*
 Alinhamento e configuração da imagem no topo do card
 */
@@ -30,6 +43,7 @@ Alinhamento e configuração da imagem no topo do card
 /*
 Imagem ao lado do titulo (mesma citada acima)
 */
+
 .card-image-title {
   display: flex;
   justify-content: center;
@@ -88,4 +102,30 @@ Alinhamento dos intens dentro do menu "Sobre"
 */
 .dropdown-item {
   text-align: left;
+}
+/* Mudança no botao de pesquisa - navbar */
+.pesquisa {
+  width: 280px;
+}
+
+.btn-css {
+  margin: 0 0.5em;
+}
+
+.fundo {
+  background-color: #fff;
+  position: absolute;
+  width: 67vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  margin-top: 5em;
+  border-radius: 0.5em;
+}
+
+.carousel-inner .c-img {
+  width: 100vw;
+  height: 100vh;
 }

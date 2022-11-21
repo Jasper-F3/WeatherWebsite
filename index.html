@@ -19,101 +19,42 @@
   </head>
   <body>
     <!--Do começo ao fim do <nav> é o menu de navegação-->
-    <nav class="navbar">
-      <nav class="navbar navbar-dark bg-dark fixed-top">
-        <div class="navbar-links">
-          <ul>
-            <li>
-              <a href="#"
-                ><img src="/img/house-heart-fill.svg" alt="" /> Inicio</a
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+      <div class="container py-3">
+        <a href="#" class="navbar-brand primary-color">
+          <img src="img/imovi-icon.png" alt="IMovi-logo" />
+          <span>IMovi</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar-items"
+          aria-controls="navbar-items"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-items">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="#" class="nav-link primary-color" aria-current="page"
+                >Home</a
               >
             </li>
-            <li>
-              <a href="#"><img src="/img/tools.svg" alt="" /> Produção</a>
+            <li class="nav-item">
+              <a href="#" class="nav-link rm primary-color">Projects</a>
             </li>
-            <li>
-              <a href="#"><img src="/img/lightbulb-fill.svg" alt="" /> Sobre</a>
+            <li class="nav-item">
+              <a href="#" class="nav-link rm primary-color">Immovable</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link rm primary-color">Contact</a>
             </li>
           </ul>
         </div>
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"
-            ><img src="/Icons/estação-depositphotos-bgremover.png" alt="" />
-            IFRS Campus Feliz</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasDarkNavbar"
-            aria-controls="offcanvasDarkNavbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-end text-bg-dark"
-            tabindex="-1"
-            id="offcanvasDarkNavbar"
-            aria-labelledby="offcanvasDarkNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
-                Dark offcanvas
-              </h5>
-              <button
-                type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <form class="d-flex mt-3" role="search">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-success" type="submit">Search</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </nav>
+      </div>
     </nav>
 
     <!--Aqui fico o inicio dos Slides de fundo

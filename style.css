@@ -1,7 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   width: 100vw;
   height: 100vh;
+  margin: 0;
+  padding: 0;
 }
+/*
+Nova NavBar não funcionando não sei porque
+*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+}
+
+.navbar-links li img {
+  width: 30px;
+  margin-top: -5px;
+}
+
+.navbar-links li a {
+  padding: 0.3rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  background-color: #1dee0a;
+  border-radius: 10px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-links ul {
+  margin: 10;
+  padding: 10;
+  display: flex;
+  gap: 60px;
+  font-size: 22px;
+  z-index: 9999;
+}
+
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navba {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
 .slide {
   width: 100vw;
   height: 100vh;
@@ -41,12 +122,6 @@ Criação da Responsividade dos slides do fundo
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-/*
-Inicio da tentaive de deixar os cards responivos
-*/
-@media screen and (min-width: 767px) {
 }
 
 /*
@@ -92,11 +167,6 @@ Imagem ao lado do titulo (mesma citada acima)
   position: absolute;
 }
 
-.navbar-brand {
-  height: 55px;
-  position: relative;
-}
-
 /*
 Classe criado para alinhar o conteudo (divisor colorido, dado, simobolo)
 */
@@ -130,22 +200,6 @@ Alinhamento das listas do card
 */
 .list-group-item {
   right: 40px;
-}
-
-/*
-Alinhamento dos intens dentro do menu "Sobre"
-*/
-.dropdown-item {
-  text-align: left;
-}
-
-/* Mudança no botao de pesquisa - navbar */
-.pesquisa {
-  width: 280px;
-}
-
-.btn-css {
-  margin: 0 0.5em;
 }
 
 .fundo {

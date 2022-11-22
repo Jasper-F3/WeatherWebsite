@@ -9,7 +9,6 @@
 body {
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
 }
 /* background */
 .background {
@@ -48,14 +47,22 @@ span {
 /* carousel */
 
 .slide {
-  width: 550px;
-  height: 550px;
+  width: 480px;
+  height: 480px;
   margin-top: 1.5em;
 }
 .c-img {
   width: 100%;
   height: 100%;
   border-radius: 5px;
+}
+#slider-container {
+  height: auto;
+  position: relative;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  height: 20px;
 }
 
 /* cards */
@@ -72,6 +79,14 @@ e um do lado do outro
   width: 100vw;
   height: 100vh;
 }
+/* flex dos outros cartoes */
+.flex-other {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
 
 /*
 Simbolo da velocidade do vento bagulho (divisor verde na esquerda)
@@ -81,7 +96,9 @@ Simbolo da velocidade do vento bagulho (divisor verde na esquerda)
   height: 20px;
   background-color: #1dee0a;
   border-radius: 10px;
+  display: flex;
 }
+
 /*
 Simbolo de humidade (divisor azul na esquerda)
 */
@@ -119,18 +136,58 @@ Alinhamento das listas do card
   transition: background-color 0.4s ease-in-out;
 }
 
+/* outros cards - inicio */
+.card-other {
+  border: 1px solid red;
+  width: 100%;
+  height: 80px;
+  display: flex;
+}
+.card-other .card-head {
+  width: 80px;
+  height: 100%;
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-other .card-head i {
+  font-size: 32px;
+  color: violet;
+}
+.card-other .card-head p {
+  font-size: 17px;
+  top: 10px;
+}
+.card-other .card-content {
+  border: 1px solid green;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.item {
+  height: 65%;
+  width: 100%;
+  border: 1px solid black;
+}
+.text {
+  margin-left: 15px;
+  gap: 50px;
+}
+
 /* desktop css */
 
 @media (min-width: 768px) {
   .card {
     margin-top: 1.5em;
     width: 25em;
-    height: 400px;
+    height: 450px;
     background-color: #fafafa;
   }
 
   .list-group-item {
     width: 5.8em;
+    height: 3.5em;
     background-color: #fafafa;
     right: 10px;
   }
@@ -167,6 +224,7 @@ Alinhamento das listas do card
     display: flex;
     gap: 200px;
     font-size: 100%;
+    left: 2px;
   }
   .list-group .list-group-item button:hover {
     background-color: #41c3f7;

@@ -34,14 +34,25 @@ span {
   color: #fff;
 }
 
+.nav-item button{
+  background: transparent;
+  border: none;
+  font-size: 25px;
+  color: white;
+}
+
+.nav-item{
+  display: flex
+}
+
 .nav-link {
-  font-size: 100%;
+  font-size: 25px;
 }
 
 .navbar-nav {
   display: flex;
   gap: 20px;
-  margin-right: 10px;
+  margin-right: 40px;
 }
 
 .navbar-brand {
@@ -132,8 +143,8 @@ Cor das setas do mini card
 @media (min-width: 768px) {
   .card {
     margin-top: 1.5em;
-    width: 34%;
-    height: 58%;
+    width: 400px;
+    height: 400px;
     background-color: #fafafa;
     right: 5%;
   }
@@ -164,7 +175,7 @@ Cor das setas do mini card
     font-weight: bold;
   }
   .list-group {
-    width: 405px;
+    width: 398px;
     margin-left: -12px;
   }
 
@@ -227,8 +238,7 @@ Alinhamento e configuração da imagem, titulo,
 dia da semana e temperatura
 */
   .card-img-top {
-    width: 90px;
-    height: 90px;
+    width: 120px;
     border-radius: 50%;
   }
 
@@ -236,10 +246,10 @@ dia da semana e temperatura
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
   }
   .temperature {
-    font-size: 90px;
+    font-size: 120px;
   }
 
   .card-title {
@@ -250,7 +260,7 @@ dia da semana e temperatura
     text-align: center;
     font-weight: bold;
     margin-top: 25px;
-    font-size: 128%;
+    font-size: 40px;
   }
 
   .data-text {
@@ -261,13 +271,12 @@ dia da semana e temperatura
   /* carousel */
 
   .slide {
-    width: 660px;
+    width: 730px;
     margin-top: 1.5em;
-    right: 30px;
+    right: 70px;
   }
   .c-img {
-    width: 100%;
-    height: 100%;
+    width: 750px;
     border-radius: 5px;
   }
   /*
@@ -339,5 +348,8 @@ dia da semana e temperatura
   .item .text {
     margin-left: 150%;
     font-weight: bold;
+  }
+  .item .wind-icon{
+    background-color: red;
   }
 }

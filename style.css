@@ -127,6 +127,46 @@ Cor das setas do mini card
 .bi-arrow-up {
   color: red;
 }
+
+/*aba projetos*/
+
+.projeto-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.projeto-fundo {
+  background-color: rgb(212, 210, 210);
+  position: absolute;
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5em;
+  border-radius: 0.5em;
+}
+
+.icon-project {
+  width: 10px;
+  height: 20px;
+  background-color: #3b423b;
+  border-radius: 10px;
+  display: flex;
+}
+
+.link-icon {
+  width: 10px;
+  height: 20px;
+  background-color: #3b423b;
+  border-radius: 10px;
+}
+
 /* desktop css */
 
 @media (min-width: 768px) {
@@ -278,6 +318,13 @@ dia da semana e temperatura
   /* Mini cards - inicio */
   /* flex dos outros cartoes */
   .flex-other {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    gap: 10px;
+  }
+
+  .card-project {
     display: flex;
     justify-content: center;
     margin: 0;

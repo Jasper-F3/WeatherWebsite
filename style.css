@@ -34,15 +34,15 @@ span {
   color: #fff;
 }
 
-.nav-item button{
+.nav-item button {
   background: transparent;
   border: none;
   font-size: 25px;
   color: white;
 }
 
-.nav-item{
-  display: flex
+.nav-item {
+  display: flex;
 }
 
 .nav-link {
@@ -125,6 +125,7 @@ Simbolo de humidade (divisor azul na esquerda)
   border: none;
   width: 150px;
   height: 30px;
+  border-radius: 10px;
   transition: background-color 0.4s ease-in-out;
 }
 
@@ -178,28 +179,38 @@ Cor das setas do mini card
   border-radius: 10px;
 }
 
+/*
+  Tentativa de criação de texto transparente
+  erro: parte transparente não vai para trás
+  */
+
+.box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.box:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  right: 0px;
+}
+.box p {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
 /* desktop css */
 
 @media (min-width: 768px) {
-  .card {
-    margin-top: 1.5em;
-    width: 400px;
-    height: 400px;
-    background-color: #fafafa;
-    right: 5%;
-  }
-
-  .list-group-item {
-    width: 5.8em;
-    height: 3.5em;
-    background-color: #fafafa;
-  }
-  .fundo {
-    margin: 0;
-    width: 1200px;
-    height: 700px;
-    margin-top: 80px;
-  }
   .background {
     height: 100%;
     background: url(/img/deb6f7721d41658c6667e6fa03b4ca5d5907ed64d0235a1c0f9d7f000c2a33d9.jpg);
@@ -208,69 +219,38 @@ Cor das setas do mini card
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
+
+  .card {
+    margin-top: 1.5em;
+    width: 400px;
+    height: 400px;
+    background-color: #fafafa;
+    right: 5%;
+  }
+
+  .list-group .list-group-item button {
+    margin-left: 100px;
+  }
+
   .card-list-content {
     display: flex;
-    justify-content: flex-start;
     gap: 10px;
     font-weight: bold;
   }
-  .list-group {
-    width: 398px;
-    margin-left: -12px;
-  }
 
-  .list-group button {
-    background-color: rgba(62, 86, 224, 0.4);
-    border-radius: 10px;
-    padding: 3px;
-    margin-left: 110px;
-    font-weight: bold;
-  }
   .list-group-item {
-    border-bottom: 1px solid #e0dfdf;
-    width: 100%;
     display: flex;
     gap: 200px;
-    font-size: 100%;
+    width: 398px;
+    height: 3.5em;
+    right: 12px;
+    background-color: #fafafa;
   }
-  .list-group .list-group-item button:hover {
-    background-color: #41c3f7;
-    justify-content: center;
-    align-items: center;
-    display: absolute;
-  }
-
-  .nav-link:hover {
-    color: #beaaaa;
-  }
-
-  /*
-  Tentativa de criação de texto transparente
-  erro: parte transparente não vai para trás
-  */
-
-  .box {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: 1px solid #fff;
-    border-radius: 10px;
-  }
-
-  .box:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    right: 0px;
-  }
-  .box p {
-    text-align: center;
-    color: white;
-    font-weight: bold;
+  .fundo {
+    margin: 0;
+    width: 1200px;
+    height: 700px;
+    margin-top: 80px;
   }
 
   /*
@@ -396,7 +376,185 @@ dia da semana e temperatura
     margin-left: 150%;
     font-weight: bold;
   }
-  .item .wind-icon{
+  .item .wind-icon {
+    background-color: red;
+  }
+}
+
+@media (max-width: 600px) {
+  .background {
+    height: 140%;
+    background: url(/img/pexels-sohail-nachiti-807598.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .card {
+    margin-top: 1.5em;
+    width: 260px;
+    height: 260px;
+    background-color: #fafafa;
+  }
+
+  .fundo {
+    margin: 0;
+    width: 300px;
+    height: 1000px;
+    margin-top: 400px;
+  }
+  .list-group-item {
+    gap: 100px;
+    width: 5.8em;
+    height: 3.5em;
+    background-color: #fafafa;
+  }
+
+  .card-list-content {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+  }
+  .list-group {
+    width: 259px;
+    margin-left: -12px;
+  }
+
+  .list-group button {
+    background-color: rgba(62, 86, 224, 0.4);
+    border-radius: 10px;
+    font-weight: bold;
+    margin-left: 37px;
+  }
+  .list-group-item {
+    border-bottom: 1px solid #e0dfdf;
+    width: 100%;
+    display: flex;
+    gap: 70px;
+    font-size: 100%;
+  }
+  .list-group .list-group-item button:hover {
+    background-color: #41c3f7;
+  }
+
+  .card-img-top {
+    width: 120px;
+    border-radius: 50%;
+  }
+
+  .card-image-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .temperature {
+    font-size: 65px;
+  }
+
+  .card-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .week-day {
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+  }
+
+  .data-text {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .nav-link:hover {
+    color: #beaaaa;
+  }
+
+  /* carousel */
+
+  .slide {
+    width: 270px;
+    left: 30px;
+    margin-top: 150px;
+  }
+  .c-img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  /* Mini cards - inicio */
+  /* flex dos outros cartoes */
+  .flex-other {
+    flex-direction: column;
+    height: 10px;
+    margin-bottom: 260px;
+  }
+
+  .card-other {
+    width: 280px;
+    height: 80px;
+    display: flex;
+    border-radius: 20px;
+    background-color: whitesmoke;
+  }
+
+  .card-other .card-head {
+    width: 76px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-other .card-head i {
+    font-size: 29px;
+  }
+
+  .card-other .card-head p {
+    font-size: 17px;
+    top: 10px;
+  }
+
+  .card-other .card-content {
+    width: 25%;
+    display: flex;
+  }
+
+  .item {
+    height: 40px;
+    margin-top: 5px;
+    display: flex;
+  }
+
+  .text-temperature-data {
+    font-size: 15px;
+    display: flex;
+    margin-left: 99px;
+    margin-bottom: 20px;
+    margin-top: 3px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .text-humitity-data {
+    font-size: 12px;
+    display: flex;
+    margin-left: 99px;
+    margin-bottom: 20px;
+    margin-top: 3px;
+    align-items: center;
+  }
+  .text img {
+    width: 20px;
+  }
+
+  .item .text {
+    margin-left: 12px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .item .wind-icon {
     background-color: red;
   }
 }

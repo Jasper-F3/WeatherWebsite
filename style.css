@@ -372,7 +372,7 @@ dia da semana e temperatura
 
 @media (max-width: 600px) {
   .background {
-    height: 1200px;
+    height: 160vh;
     background: url(/img/pexels-sohail-nachiti-807598.jpg);
     background-size: cover;
     background-position: center;

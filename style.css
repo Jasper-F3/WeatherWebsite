@@ -9,6 +9,7 @@
 body {
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
 }
 /* background */
 .background {
@@ -212,7 +213,8 @@ Cor das setas do mini card
 
 @media (min-width: 768px) {
   .background {
-    height: 100%;
+    height: 100vh;
+    position: fixed;
     background: url(/img/deb6f7721d41658c6667e6fa03b4ca5d5907ed64d0235a1c0f9d7f000c2a33d9.jpg);
     background-size: cover;
     background-position: center;
@@ -222,8 +224,8 @@ Cor das setas do mini card
 
   .card {
     margin-top: 1.5em;
-    width: 400px;
-    height: 400px;
+    width: 20vw;
+    height: 40vh;
     background-color: #fafafa;
     right: 5%;
   }
@@ -240,17 +242,17 @@ Cor das setas do mini card
 
   .list-group-item {
     display: flex;
-    gap: 200px;
-    width: 398px;
-    height: 3.5em;
-    right: 12px;
+    gap: 11vh;
+    width: 19.9vw;
+    height: 7vh;
+    right: 1.7vh;
     background-color: #fafafa;
   }
   .fundo {
     margin: 0;
-    width: 1200px;
-    height: 700px;
-    margin-top: 80px;
+    width: 80vw;
+    height: 80vh;
+    margin-top: 10vh;
   }
 
   /*
@@ -258,7 +260,7 @@ Alinhamento e configuração da imagem, titulo,
 dia da semana e temperatura
 */
   .card-img-top {
-    width: 120px;
+    width: 15vh;
     border-radius: 50%;
   }
 
@@ -266,10 +268,10 @@ dia da semana e temperatura
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 2vw;
   }
   .temperature {
-    font-size: 120px;
+    font-size: 5vw;
   }
 
   .card-title {
@@ -279,8 +281,8 @@ dia da semana e temperatura
   .week-day {
     text-align: center;
     font-weight: bold;
-    margin-top: 25px;
-    font-size: 40px;
+    margin-top: 1vh;
+    font-size: 2vw;
   }
 
   .data-text {
@@ -291,19 +293,20 @@ dia da semana e temperatura
   /* carousel */
 
   .slide {
-    width: 730px;
-    margin-top: 1.5em;
+    width: 38vw;
+    margin-top: 4vh;
     right: 70px;
+    left: -4vw;
   }
   .c-img {
-    width: 750px;
+    width: 110%;
     border-radius: 5px;
   }
   /*
   simbolos do card principal
   */
   .data-text img {
-    width: 20px;
+    width: 3vh;
   }
 
   /* Mini cards - inicio */

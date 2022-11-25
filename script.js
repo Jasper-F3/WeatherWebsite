@@ -1,6 +1,13 @@
-var btn = document.querySelector('button');
-var arrow = document.querySelector('down')
+async function getDados(url) {
+  let dados = await fetch(url);
+  return dados.json();
+}
 
-btn.addEventListener('click', function(){
-    down.-e.
-})
+async function imprimirDados(url) {
+  const d = await getDados(url);
+  console.log(d[0].temperatura);
+}
+
+document.querySelector("#info").addEventListener("click", async () => {
+  await imprimirDados("http://localhost:3000/dados");
+});

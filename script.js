@@ -26,22 +26,21 @@ async function getLeituras(url) {
       divHumidade.append(humiAdd, "%");
       divVento.append(ventoAdd, "km/h");
     }
-    for (let data in day) {
-      if (data === "createdAt") {
-        var dataHoje = day[data];
-      }
-    }
-    var arrayHoje = dataHoje.split("T");
-    hoje = arrayHoje[0].split("-");
-    hoje = parseInt(hoje[2]);
   });
-  for (let dias in dados) {
-    var dataDia = dados[dias].createdAt;
-    var arrayDia = dataDia.split("T");
-    dia = arrayDia[0].split("-");
-    dia = parseInt(dia[2]);
+  let datas = [];
+  var hoje = new Date(dados[dados.length - 1].createdAt);
 
-    if (dia === hoje - 2) {
+  console.log("hoje");
+
+  console.log(hoje);
+  console.log("--------------");
+  for (let i in dados) {
+    datas.push(dados[i].createdAt);
+  }
+  for (let i in datas) {
+    let data = new Date(datas[i]);
+    if (data.getDay() < hoje.getDay()) {
+      console.log(data);
     }
   }
 }

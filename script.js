@@ -27,21 +27,22 @@ async function getLeituras(url) {
       divVento.append(ventoAdd, "km/h");
     }
   });
-  let datas = [];
   var hoje = new Date(dados[dados.length - 1].createdAt);
 
   console.log("hoje");
 
   console.log(hoje);
   console.log("--------------");
+  var tempOntem = [];
+
   for (let i in dados) {
-    datas.push(dados[i].createdAt);
-  }
-  for (let i in datas) {
-    let data = new Date(datas[i]);
-    if (data.getDay() < hoje.getDay()) {
-      console.log(data);
+    let data = new Date(dados[i].createdAt);
+
+    if (data.getDay() === hoje.getDay() - 1) {
+      tempOntem.push(dados[i].temperatura);
+      console.log("--------------");
     }
+    console.log(tempOntem);
   }
 }
 getLeituras("http://localhost:3000/dados");

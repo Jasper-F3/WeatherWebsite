@@ -1,22 +1,31 @@
+// variaveis
+const divTemp = document.querySelector("#temp");
+const divHumidade = document.querySelector("#humidade");
+const divVento = document.querySelector("#vento");
+var hoje = 0;
+var tempOntem = [];
+
 async function getDados(url) {
   let dados = await fetch(url);
   return dados.json();
 }
+function minMax(arr) {
+  const min = _.min(arr);
+  const max = _.max(arr);
 
-async function getLeituras(url) {
+  return [min, max];
+}
+
+async function insertHTML(url) {
   const dados = await getDados(url);
-  const divTemp = document.querySelector("#temp");
-  const divHumidade = document.querySelector("#humidade");
-  const divVento = document.querySelector("#vento");
-  var hoje;
-  dados.forEach((element) => {
-    const day = dados[dados.length - 1];
+  const atualizacao = dados[dados.length - 1];
 
-    if (element === day) {
+  dados.forEach((element) => {
+    if (element === atualizacao) {
       // dados
-      const temp = Math.ceil(day.temperatura);
-      const humidade = day.umidade;
-      const vento = day.vento;
+      const temp = parseInt(atualizacao.temperatura);
+      const humidade = atualizacao.umidade;
+      const vento = atualizacao.vento;
       // criação do texto para o html
       const tempAdd = document.createTextNode(temp);
       const humiAdd = document.createTextNode(humidade);
@@ -27,22 +36,16 @@ async function getLeituras(url) {
       divVento.append(ventoAdd, "km/h");
     }
   });
-  var hoje = new Date(dados[dados.length - 1].createdAt);
-
-  console.log("hoje");
-
-  console.log(hoje);
-  console.log("--------------");
-  var tempOntem = [];
-
+  //  tratamento datas
+  hoje = new Date(dados[dados.length - 1].createdAt);
   for (let i in dados) {
     let data = new Date(dados[i].createdAt);
 
     if (data.getDay() === hoje.getDay() - 1) {
       tempOntem.push(dados[i].temperatura);
-      console.log("--------------");
     }
-    console.log(tempOntem);
   }
+  let teste = minMax(tempOntem);
+  console.log(teste);
 }
-getLeituras("http://localhost:3000/dados");
+insertHTML("http://localhost:3000/dados");

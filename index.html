@@ -214,9 +214,9 @@
                     </div>
                     <div class="text-temperature-data">
                       <i class="bi bi-arrow-down"></i>
-                      15°
+                      <div id="tempOntemMin"></div>
                       <i class="bi bi-arrow-up"></i>
-                      25°
+                      <div id="TempOntemMax"></div>
                     </div>
                   </li>
                   <li class="item">
@@ -224,7 +224,8 @@
                       <div class="text">CHUVA</div>
                     </div>
                     <div class="text-humitity-data">
-                      <img src="/Icons/droplet.svg" alt="" /> 60mm - 90%
+                      <img src="/Icons/droplet.svg" alt="" />
+                      <div id="chuvaOntem"></div>
                     </div>
                   </li>
                 </ul>
@@ -300,6 +301,5 @@
     ></script>
     <!-- js projeto -->
     <script src="./script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
   </body>
 </html>

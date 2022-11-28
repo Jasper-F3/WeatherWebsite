@@ -11,16 +11,20 @@ const divChuvaOntem = document.querySelector("#chuvaOntem");
 const divTempAntesMin = document.querySelector("#minAntesOntem");
 const divTempAntesMax = document.querySelector("#maxAntesOntem");
 const divChuvaAntes = document.querySelector("#chuvaAntes");
-
+// antes de ontem x2
+const divTempAntesX2Min = document.querySelector("#mixAntesx2");
+const divTempAntesX2Max = document.querySelector("#maxAntesx2");
+const divChuvaAntesX2 = document.querySelector("#chuvaAntesx2");
 // variaveis globais
 let hoje;
 let ontem;
 let ontem_1;
-
+let ontem_2;
+// temperaturas
 let tempOntem = [];
-let TemperaturasFinaisOntem;
+let TemperaturasFinaisOntem = [];
 let temp2dias = [];
-
+let Temp3dias = [];
 async function getDados(url) {
   let dados = await fetch(url);
   return dados.json();
@@ -50,6 +54,11 @@ async function insertHTML(url) {
         temp2dias.push(dados[i].temperatura);
         ontem_1 = dados[i];
         temp2dias = minMax(temp2dias);
+      }
+      if (data.getDate() === hoje - 3) {
+        Temp3dias.push(dados[i].temperatura);
+        ontem_2 = dados[i];
+        temp3dias = minMax(Temp3dias);
       }
     }
 
@@ -94,6 +103,19 @@ async function insertHTML(url) {
       divTempAntesMin.append(tempAddMin, "°");
       divTempAntesMax.append(tempAddMax, "°");
       divChuvaAntes.append(chuvaAdd, "mm");
+    }
+    if (element === ontem_2) {
+      const tempMin = parseInt(temp3dias[0]);
+      const tempMax = parseInt(temp3dias[1]);
+      const chuva = ontem_2.chuva;
+      // criação do texto para o html
+      const tempAddMin = document.createTextNode(tempMin);
+      const tempAddMax = document.createTextNode(tempMax);
+      const chuvaAdd = document.createTextNode(chuva);
+      // insert dos dados no html
+      divTempAntesX2Min.append(tempAddMin, "°");
+      divTempAntesX2Max.append(tempAddMax, "°");
+      divChuvaAntesX2.append(chuvaAdd, "mm");
     }
   });
 }

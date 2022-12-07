@@ -71,9 +71,9 @@ span {
   display: none;
 }
 
-/* cards */
+/* cartaos */
 /*
-Flex para alinhar os cards no centro da pagina
+Flex para alinhar os cartaos no centro da pagina
 e um do lado do outro
 */
 .flex {
@@ -107,20 +107,19 @@ Simbolo de humidade (divisor azul na esquerda)
   border-radius: 10px;
 }
 
-/* fundo cards */
+/* fundo cartaos */
 .fundo {
   background-color: rgb(212, 210, 210);
   position: absolute;
   width: 70vw;
   height: 97vh;
   display: flex;
-  justify-content: center;
   gap: 10px;
   margin-top: 10em;
   border-radius: 0.5em;
 }
-/* seção cards content */
-.list-group .list-group-item button {
+/* seção cartaos content */
+.lista-grupo .lista-grupo-item button {
   background-color: #0aadee;
   color: #fff;
   border: none;
@@ -131,7 +130,7 @@ Simbolo de humidade (divisor azul na esquerda)
 }
 
 /*
-Cor das setas do mini card
+Cor das setas do mini cartao
 */
 .bi-arrow-down {
   color: blue;
@@ -215,39 +214,42 @@ Cor das setas do mini card
   .background {
     height: 100vh;
     position: fixed;
-    background: url(/img/deb6f7721d41658c6667e6fa03b4ca5d5907ed64d0235a1c0f9d7f000c2a33d9.jpg);
+    background: url(./img/background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
 
-  .card {
-    margin-top: 3.6vh;
+  .cartao {
+    margin: 3.6vh;
     width: 20vw;
     height: 40vh;
     background-color: #fafafa;
-    right: 4vw;
+  }
+  .lista-grupo {
+    height: 50%;
   }
 
-  .list-group .list-group-item button {
+  .lista-grupo .lista-grupo-item button {
     margin-left: 5vw;
     font-weight: bold;
   }
 
-  .card-list-content {
+  .cartao-list-content {
     display: flex;
     gap: 0.3vw;
     font-weight: bold;
   }
 
-  .list-group-item {
+  .lista-grupo-item {
     display: flex;
+    margin-top: 7px;
     gap: 18vh;
-    width: 19.8vw;
-    height: 6.5vh;
-    right: 0.6vw;
+    width: 18vw;
+    height: 4vh;
     background-color: #fafafa;
+    border-top: 1px solid #c5c0c0;
   }
   .fundo {
     width: 67vw;
@@ -259,12 +261,12 @@ Cor das setas do mini card
 Alinhamento e configuração da imagem, titulo, 
 dia da semana e temperatura
 */
-  .card-img-top {
+  .cartao-img-top {
     width: 15vh;
     border-radius: 50%;
   }
 
-  .card-image-title {
+  .cartao-image-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -274,7 +276,7 @@ dia da semana e temperatura
     font-size: 5vw;
   }
 
-  .card-title {
+  .cartao-title {
     text-align: center;
     font-weight: bold;
   }
@@ -297,13 +299,13 @@ dia da semana e temperatura
     border-radius: 5px;
   }
   /*
-  simbolos do card principal
+  simbolos do cartao principal
   */
   .data-text img {
     width: 3vh;
   }
 
-  /* Mini cards - inicio */
+  /* Mini cartaos - inicio */
   /* flex dos outros cartoes */
   .flex-other {
     display: flex;
@@ -311,32 +313,32 @@ dia da semana e temperatura
     gap: 3%;
   }
 
-  .card-project {
+  .cartao-project {
     display: flex;
     justify-content: center;
   }
 
-  .card-other {
+  .cartao-other {
     width: 20vw;
     height: 9vh;
     display: flex;
     border-radius: 1vw;
     background-color: whitesmoke;
   }
-  .card-other .card-head {
+  .cartao-other .cartao-head {
     width: 5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .card-other .card-head i {
+  .cartao-other .cartao-head i {
     font-size: 2vw;
     margin-bottom: -1vh;
   }
-  .card-other .card-head p {
+  .cartao-other .cartao-head p {
     font-size: 1vw;
   }
-  .card-other .card-content {
+  .cartao-other .cartao-content {
     width: 25%;
     display: flex;
   }
@@ -377,7 +379,7 @@ dia da semana e temperatura
     background-size: cover;
     background-position: center;
   }
-  .card {
+  .cartao {
     margin-top: 2vh;
     width: 90vw;
     height: 40vh;
@@ -390,44 +392,38 @@ dia da semana e temperatura
     height: 140vh;
     margin-top: 70vh;
   }
-  .list-group-item {
+
+  .lista-grupo-item {
     background-color: #fafafa;
+    border-bottom: 1px solid #e0dfdf;
+    display: flex;
+    font-size: 100%;
   }
 
-  .card-list-content {
+  .cartao-list-content {
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
     display: flex;
     gap: 1vw;
     font-weight: bold;
   }
-  .list-group {
-    width: 89vw;
-    margin-left: -1.6vh;
-  }
 
-  .list-group button {
+  .lista-grupo button {
     border-radius: 10vw;
     font-weight: bold;
     margin-left: 20vw;
     margin-bottom: 1vh;
   }
-  .list-group-item {
-    border-bottom: 1px solid #e0dfdf;
-    width: 89.5vw;
-    display: flex;
-    gap: 39vw;
-    font-size: 100%;
-  }
-  .list-group .list-group-item button:hover {
+
+  .lista-grupo .lista-grupo-item button:hover {
     background-color: #41c3f7;
   }
 
-  .card-img-top {
+  .cartao-img-top {
     width: 25vw;
   }
 
-  .card-image-title {
+  .cartao-image-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -437,7 +433,7 @@ dia da semana e temperatura
     font-size: 25vw;
   }
 
-  .card-title {
+  .cartao-title {
     text-align: center;
     font-weight: bold;
     font-size: 6vw;
@@ -458,22 +454,9 @@ dia da semana e temperatura
     color: #beaaaa;
   }
 
-  /* carousel */
-
-  .slide {
-    width: 42vh;
-    left: 8vw;
-    margin-top: 25vh;
-    margin-left: -3.5vh;
-  }
-  .c-img {
-    width: 100%;
-    border-radius: 10px;
-  }
-
-  /* Mini cards - inicio */
+  /* Mini cartaos - inicio
   /* flex dos outros cartoes */
-  .flex-other {
+  /* .flex-other {
     display: grid;
     gap: 2vh;
     height: 10vh;
@@ -481,7 +464,7 @@ dia da semana e temperatura
     margin-left: 10vw;
   }
 
-  .card-other {
+  .cartao-other {
     width: 80vw;
     height: 10vh;
     display: flex;
@@ -489,22 +472,22 @@ dia da semana e temperatura
     background-color: whitesmoke;
   }
 
-  .card-other .card-head {
+  .cartao-other .cartao-head {
     width: 20vw;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .card-other .card-head i {
+  .cartao-other .cartao-head i {
     font-size: 8vw;
   }
 
-  .card-other .card-head p {
+  .cartao-other .cartao-head p {
     font-size: 100%;
   }
 
-  .card-other .card-content {
+  .cartao-other .cartao-content {
     display: flex;
   }
 
@@ -538,5 +521,5 @@ dia da semana e temperatura
   }
   .item .wind-icon {
     background-color: red;
-  }
+  } */
 }

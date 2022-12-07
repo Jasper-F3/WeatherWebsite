@@ -4,20 +4,23 @@ const divTemp = document.querySelector("#temp");
 const divHumidade = document.querySelector("#humidade");
 const divVento = document.querySelector("#vento");
 const divHoje = document.querySelector("#semanaHoje");
+const divChuva = document.querySelector("#chuva");
+const divLumi = document.querySelector("#luminosidade");
+const divPressao = document.querySelector("#pressao");
 // ontem
-const divTempOntemMin = document.querySelector("#tempOntemMin");
-const divTempOntemMax = document.querySelector("#TempOntemMax");
-const divChuvaOntem = document.querySelector("#chuvaOntem");
-const divOntem = document.querySelector("#semanaOntem");
+// const divTempOntemMin = document.querySelector("#tempOntemMin");
+// const divTempOntemMax = document.querySelector("#TempOntemMax");
+// const divChuvaOntem = document.querySelector("#chuvaOntem");
+// const divOntem = document.querySelector("#semanaOntem");
 
-// anteontem - AO
-const divTempAOMin = document.querySelector("#minAntesOntem");
-const divTempAOMax = document.querySelector("#maxAntesOntem");
-const divChuvaAO = document.querySelector("#chuvaAntes");
-// ante anteontem - AAO
-const divTempAAOMin = document.querySelector("#mixAntesx2");
-const divTempAAOMax = document.querySelector("#maxAntesx2");
-const divChuvaAAO = document.querySelector("#chuvaAntesx2");
+// // anteontem - AO
+// const divTempAOMin = document.querySelector("#minAntesOntem");
+// const divTempAOMax = document.querySelector("#maxAntesOntem");
+// const divChuvaAO = document.querySelector("#chuvaAntes");
+// // ante anteontem - AAO
+// const divTempAAOMin = document.querySelector("#mixAntesx2");
+// const divTempAAOMax = document.querySelector("#maxAntesx2");
+// const divChuvaAAO = document.querySelector("#chuvaAntesx2");
 // variaveis globais
 let hoje;
 let hojeDia;
@@ -95,17 +98,32 @@ async function insertHTML(url) {
       const temp = parseInt(atualizacao.temperatura);
       const humidade = atualizacao.umidade;
       const vento = atualizacao.vento;
+      const chuva = atualizacao.chuva;
+      const lumi = atualizacao.luminosidade;
+      const pressao = atualizacao.pressao;
       let dia = new Date(atualizacao.createdAt);
       dia = Semana[dia.getDay()];
       // criação do texto para o html
       const tempAdd = document.createTextNode(temp);
-      const humiAdd = document.createTextNode(humidade);
-      const ventoAdd = document.createTextNode(vento);
+      const humiAdd = document.createTextNode(humidade + "%");
+      const ventoAdd = document.createTextNode(vento + "km/h");
       const diaAdd = document.createTextNode(dia);
+      const chuvaAdd = document.createTextNode(chuva + "mm");
+      const lumiAdd = document.createTextNode(lumi + "%");
+      const pressaoAdd = document.createTextNode(pressao + " P");
+
+      // icons
+      const iconhumidade = document.querySelector("#humiIcon");
+      const iconVento = document.querySelector("#ventoIcon");
+      const iconChuva = document.querySelector("#chuvaIcon");
+
       // insert dos dados no html
       divTemp.append(tempAdd, "°");
-      divHumidade.append(humiAdd, "%");
-      divVento.append(ventoAdd, "km/h");
+      divHumidade.insertBefore(humiAdd, iconhumidade);
+      divVento.insertBefore(ventoAdd, iconVento);
+      divChuva.insertBefore(chuvaAdd, iconChuva);
+      divLumi.append(lumiAdd);
+      divPressao.append(pressaoAdd);
       divHoje.append(diaAdd);
     }
 

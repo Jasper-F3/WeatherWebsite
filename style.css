@@ -214,7 +214,7 @@ Cor das setas do mini cartao
   .background {
     height: 100vh;
     position: fixed;
-    background: url(./img/background.jpg);
+    background: url("./img/background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
